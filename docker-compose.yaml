@@ -1,0 +1,6 @@
+services:
+  stegopix:
+    image: ghcr.io/mgrsc/stegopix:latest
+    env_file: .env
+    ports:
+      - 30003:5173
