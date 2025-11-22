@@ -11,7 +11,7 @@ WORKDIR /app
 COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY frontend/package.json frontend/bun.lock .
+COPY frontend/package.json .
 RUN bun install
 
 COPY . .
