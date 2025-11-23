@@ -51,7 +51,7 @@ export default function App() {
     fetch('/api/config')
       .then(res => res.json())
       .then(data => {
-        setConfig(data);
+        setConfig(prev => ({ ...prev, ...data }));
         if (!data.auth_required) setIsAuth(true);
         else if (token) setIsAuth(true);
       })

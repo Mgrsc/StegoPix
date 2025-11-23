@@ -48,6 +48,10 @@ Check the `docker-compose.yaml` file in the root directory for configuration det
 docker-compose up -d
 ```
 
+## 🔐 Authentication
+
+Set `API_TOKEN` in the environment to turn on backend authentication. The frontend asks the backend (via `/api/config`) whether auth is required; if so, it prompts the user for the token and attaches it to every request. Leave `API_TOKEN` empty to run in open mode.
+
 ## 🔗 Acknowledgements
 
 The core algorithm of this project originates from [guofei9987/blind\_watermark](https://github.com/guofei9987/blind_watermark). Thanks to the original author for their outstanding work.

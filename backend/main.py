@@ -57,7 +57,7 @@ app.add_middleware(
 )
 
 API_TOKEN = os.getenv("API_TOKEN")
-AUTH_ENABLED = os.getenv("ENABLE_FRONTEND_AUTH", "false").lower() == "true"
+AUTH_ENABLED = bool(API_TOKEN)
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
